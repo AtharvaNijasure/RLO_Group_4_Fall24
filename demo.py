@@ -15,8 +15,8 @@ def password_game():
             message = 'Error: Password must contain a digit'
         elif password_sol.check_uppercase(password) == False and password_sol.check_uppercase(password)!= None:
             message = 'Error: Does not contain an upperclase letter'
-        elif password_sol.check_even_numbers(password) == False and password_sol.check_even_numbers(password) != None:
-            message = "Error: Does not contain an even number"
+        elif password_sol.check_even_numbers_corrected(password) == False and password_sol.check_even_numbers(password) != None:
+            message = "Error: Does not contain only even numbers"
         elif password_sol.check_sum(password) == False and password_sol.check_sum(password) != None:
             message = "Error: All the digits do not add up to 25"
         elif password_sol.check_day_of_week(password) == False and password_sol.check_day_of_week(password) != None:
@@ -58,7 +58,7 @@ def password_game():
             ul li {
                 margin: 10px 0;
             }
-            form input[type="password"] {
+            form input[type="text"] {
                 padding: 10px;
                 width: 80%;
                 margin-bottom: 20px;
@@ -92,7 +92,7 @@ def password_game():
                 <li>Password length must be exactly 8 characters.</li>
             </ul>
             <form method="post">
-                <input type="password" name="password" required><br>
+                <input type="text" name="password" required><br>
                 <input type="submit" value="Submit">
             </form>
             {% if message %}
