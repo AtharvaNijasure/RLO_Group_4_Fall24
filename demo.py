@@ -10,7 +10,7 @@ def password_game():
         # if password_sol.check_length(password):
         #     message = 'Success! Your password meets the requirement. (Frankie, wrote this function, lol)'
         if password_sol.check_length(password) == False and password_sol.check_length(password) != None:
-            message = 'Error: Password must be exactly 8 characters long.'
+            message = 'Error: Password must be atleast 8 characters long.'
         elif password_sol.check_digit(password) == False and password_sol.check_digit(password) != None:
             message = 'Error: Password must contain a digit'
         elif password_sol.check_uppercase(password) == False and password_sol.check_uppercase(password)!= None:
